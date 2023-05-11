@@ -210,6 +210,12 @@ import csv
 #%%
 
 # 定义一个列表，包含要写入的数据
+def Duplicateasins(asins):
+    asins = list(set(asins))
+    return asins
+
+def First_three_page():
+    pass
 
 # 打开一个csv文件，指定写入模式和编码
 with open('asins.csv', 'w', encoding='utf-8') as f:
@@ -221,3 +227,4 @@ with open('asins.csv', 'w', encoding='utf-8') as f:
     data = [[item] for item in sp_asins]
     # 一次性写入多行数据
     writer.writerows(data)
+print('写入完毕！')
